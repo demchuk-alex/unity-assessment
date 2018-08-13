@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FractionCalulator", "..\ass
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "..\assemblies\Common\Common.csproj", "{ECE4E788-650A-4ADD-B144-63A957B01B67}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "..\tests\UnitTests\UnitTests.csproj", "{0464CAAE-2319-4CEA-BE8C-BED6FD054601}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{ECE4E788-650A-4ADD-B144-63A957B01B67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECE4E788-650A-4ADD-B144-63A957B01B67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECE4E788-650A-4ADD-B144-63A957B01B67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0464CAAE-2319-4CEA-BE8C-BED6FD054601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0464CAAE-2319-4CEA-BE8C-BED6FD054601}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0464CAAE-2319-4CEA-BE8C-BED6FD054601}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0464CAAE-2319-4CEA-BE8C-BED6FD054601}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
