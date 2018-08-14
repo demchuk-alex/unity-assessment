@@ -33,12 +33,12 @@ namespace FractionCalulator.Structures
                 }
 
                 var gfc = Gfc(fraction.Numerator, fraction.Denominator);
-                fraction.Numerator /= gfc;
-                fraction.Denominator /= gfc;
+                fraction.Numerator /= Math.Abs(gfc);
+                fraction.Denominator /= Math.Abs(gfc);
             }
             catch (Exception e)
             {
-                throw new Exception($"The Fraction cannot be reduced {e}");
+                throw new FractionException($"The Fraction cannot be reduced {e}");
             }
         }
 
@@ -50,11 +50,11 @@ namespace FractionCalulator.Structures
           
             if (!long.TryParse(numeratorStr, out var numerator))
             {
-                throw new Exception("The Numerator value is not valid");
+                throw new FractionException("The Numerator value is not valid");
             }
             if (!long.TryParse(denominatorStr, out var denominator))
             {
-                throw new Exception("The Denominator value is not valid");
+                throw new FractionException("The Denominator value is not valid");
             }
 
             return new Fraction(numerator, denominator);
@@ -63,7 +63,7 @@ namespace FractionCalulator.Structures
         public static Fraction Inverse(this Fraction frac)
         {
             if (frac.Numerator == 0)
-                throw new Exception("Operation not possible (Denominator cannot be assigned to 0 value)");
+                throw new FractionException("Operation not possible (Denominator cannot be assigned to 0 value)");
 
             var numerator = frac.Denominator;
             var denominator = frac.Numerator;
@@ -72,9 +72,9 @@ namespace FractionCalulator.Structures
 
         public static Fraction Negate(this Fraction frac)
         {
-            var iNumerator = -frac.Numerator;
-            var iDenominator = frac.Denominator;
-            return new Fraction(iNumerator, iDenominator);
+            var numerator = -frac.Numerator;
+            var denominator = frac.Denominator;
+            return new Fraction(numerator, denominator);
         }
 
         #endregion

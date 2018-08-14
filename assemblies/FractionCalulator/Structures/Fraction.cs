@@ -36,7 +36,7 @@ namespace FractionCalulator.Structures
             set
             {
                 if (value == 0)
-                    throw new Exception("Denominator cannot be assigned to 0 value");
+                    throw new FractionException("Denominator cannot be assigned to 0 value");
                 _denominator = value;
             }
         }
@@ -66,11 +66,11 @@ namespace FractionCalulator.Structures
             }
             catch (OverflowException)
             {
-                throw new Exception("Overflow occurred while performing Add operation");
+                throw new FractionException("Overflow occurred while performing Add operation");
             }
             catch (Exception)
             {
-                throw new Exception("An error occurred while performing Add operation");
+                throw new FractionException("An error occurred while performing Add operation");
             }
         }
 
@@ -87,11 +87,11 @@ namespace FractionCalulator.Structures
             }
             catch (OverflowException)
             {
-                throw new Exception("Overflow occurred while performing Multiply operation");
+                throw new FractionException("Overflow occurred while performing Multiply operation");
             }
             catch (Exception)
             {
-                throw new Exception("An error occurred while performing Multiply operation");
+                throw new FractionException("An error occurred while performing Multiply operation");
             }
         }
 
